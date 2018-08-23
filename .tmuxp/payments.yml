@@ -1,0 +1,76 @@
+session_name: payments
+windows:
+- window_name: IDE
+  focus: true
+  layout: main-horizontal
+  options:
+    main-pane-height: 45
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - nvim
+    - focus: true
+      shell_command:
+        - clear
+        - fortune | cowsay
+    - shell_command:
+        - cd CustomerService
+        - phpunit-watcher watch
+- window_name: API
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - shell_command:
+        - tail -f PaymentApi/public/oma-api.log | jq
+- window_name: CS
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - shell_command:
+        - tail -f CustomerService/public/oma-cs.log | jq
+- window_name: CCS
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - shell_command:
+        - tail -f CustomerCareService/public/oma-ccare.log | jq
+- window_name: GUI
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - shell_command:
+        - tail -f PaymentGUI/public/oma-gui.log | jq
+- window_name: www access
+  panes:
+    - shell_command:
+        - tail -f /var/log/httpd/access_log | lnav
+- window_name: www errors
+  panes:
+    - shell_command:
+        - tail -f /var/log/httpd/error_log | lnav
+- window_name: fpm master
+  panes:
+    - shell_command:
+        - tail -f /var/log/php-fpm.log | lnav
+- window_name: fpm pool
+  panes:
+    - shell_command:
+        - tail -f /var/log/php-fpm-www.access.log | jq -c
+- window_name: PHP errors
+  panes:
+    - shell_command:
+        - tail -f /var/log/php_errors.log | lnav
+- window_name: GUI assets
+  shell_command_before:
+    - pj payments                    # run as a first command in all panes
+  panes:
+    - shell_command:
+        - cd PaymentGUI/install/build
+        - grunt serveAssets
+- window_name: mocks
+  shell_command_before:
+    - pj payments-mocks
+  panes:
+    - shell_command:
+        - java -jar -Dspring.profiles.active=local target/payments-stubs.jar
+
