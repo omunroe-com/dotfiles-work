@@ -2,6 +2,8 @@
 
 My dotfiles @work for dev
 
+![screenshot](screenshot.png)
+
 ## manjaro (archlinux)
 
 ## deepin-wm
