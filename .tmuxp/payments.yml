@@ -72,5 +72,5 @@ windows:
     - pj payments-mocks
   panes:
     - shell_command:
-        - java -jar -Dspring.profiles.active=local target/payments-stubs.jar
+        - docker run -itP --rm -p 9191:80 -p 8443:443 -p 2525:2525 --name pay-stub pay-stub-image:latest | lnav 
 

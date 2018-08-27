@@ -5,6 +5,7 @@ set -gx PATH ~/.config/composer/vendor/bin ~/.npm-global/bin $PATH ~/.gem/ruby/2
 set -gx PROJECT_PATHS ~/omaddons/ ~/projects
 set -gx EDITOR nvim
 set -gx VISUAL nvim
+set -gx SHELL bash
 
 set -g theme_powerline_fonts yes
 set -g theme_nerd_fonts yes
