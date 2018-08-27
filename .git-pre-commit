@@ -9,6 +9,7 @@ pip list > ~/.backup/pip_packages || echo "pip failed"
 #cargo --list | tail -n +2 | tr -d " " > ~/.backup/cargo_packages || echo "cargo failed"
 ghc-pkg list > ~/.backup/ghc-pkg_packages || echo "ghc-pkg failed"
 composer global show | cut -d ' ' -f1 > ~/.backup/composer_packages || echo "composer failed"
+omf list -p > ~/.backup/oh-my-fish_packages || echo "omf failed"
 
 git add -f .backup
 
