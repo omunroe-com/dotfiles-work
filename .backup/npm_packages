@@ -1,0 +1,14 @@
+/home/boris/.npm-global/lib
+├── carbon-now-cli@1.1.0
+├── csslint@1.0.5
+├── dockerfile_lint@0.3.2
+├── dockerlint@0.3.9
+├── dockly@3.4.0
+├── eslint@4.19.1
+├── import-js@2.10.1
+├── jshint@2.9.5
+├── newman@3.9.3
+├── phantomjs@2.1.7
+├── supercat@1.1.0
+└── swagger-cli@1.0.2
+

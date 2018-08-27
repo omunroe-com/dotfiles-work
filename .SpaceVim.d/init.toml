@@ -54,6 +54,8 @@ name = "lsp"
 filetypes = [
     "php"
 ]
+[layers.override_cmd]
+    php = ["php", "/home/boris/.cache/vimfiles/repos/github.com/felixfbecker/php-language-server/bin/php-language-server.php"]
 
 [[layers]]
 name = "lang#php"
