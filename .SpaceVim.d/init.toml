@@ -52,13 +52,18 @@ name = "git"
 [[layers]]
 name = "lsp"
 filetypes = [
-    "php"
+    "php",
+    "go"
 ]
 [layers.override_cmd]
     php = ["php", "/home/boris/.cache/vimfiles/repos/github.com/felixfbecker/php-language-server/bin/php-language-server.php"]
+    go = ["go-langserver", "-mode", "stdio"]
 
 [[layers]]
 name = "lang#php"
+
+[[layers]]
+name = "lang#go"
 
 [[layers]]
 name = "ui"

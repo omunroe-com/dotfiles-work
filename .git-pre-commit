@@ -1,15 +1,15 @@
-#!/bin/sh
+#!/usr/bin/fish
 
 echo "Generating the lists of explicitly installed packages in ~/.backup"
 
-pacman -Qe > ~/.backup/pacman_packages || echo "pacman failed"
-gem list > ~/.backup/gem_packages || echo "gem failed" 
-npm list -g --depth=0 > ~/.backup/npm_packages || echo "npm failed"
-pip list > ~/.backup/pip_packages || echo "pip failed"
-#cargo --list | tail -n +2 | tr -d " " > ~/.backup/cargo_packages || echo "cargo failed"
-ghc-pkg list > ~/.backup/ghc-pkg_packages || echo "ghc-pkg failed"
-composer global show | cut -d ' ' -f1 > ~/.backup/composer_packages || echo "composer failed"
-omf list -p > ~/.backup/oh-my-fish_packages || echo "omf failed"
+pacman -Qe > ~/.backup/pacman_packages; or echo "pacman failed"
+gem list > ~/.backup/gem_packages; or echo "gem failed" 
+npm list -g --depth=0 > ~/.backup/npm_packages; or echo "npm failed"
+pip list > ~/.backup/pip_packages; or echo "pip failed"
+#cargo --list | tail -n +2 | tr -d " " > ~/.backup/cargo_packages; or echo "cargo failed"
+ghc-pkg list > ~/.backup/ghc-pkg_packages; or echo "ghc-pkg failed"
+composer global show | cut -d ' ' -f1 > ~/.backup/composer_packages; or echo "composer failed"
+omf list -p > ~/.backup/oh-my-fish_packages; or echo "omf failed"
 
 git add -f .backup
 

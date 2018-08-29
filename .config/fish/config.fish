@@ -1,7 +1,7 @@
 set http_proxy http://proxy.rd.francetelecom.fr:8080
 set https_proxy http://proxy.rd.francetelecom.fr:8080
 
-set -gx PATH ~/.config/composer/vendor/bin ~/.npm-global/bin $PATH ~/.gem/ruby/2.5.0/bin ~/.local/bin
+set -gx PATH ~/.config/composer/vendor/bin ~/.npm-global/bin $PATH ~/.gem/ruby/2.5.0/bin ~/.local/bin ~/go/bin
 set -gx PROJECT_PATHS ~/omaddons/ ~/projects
 set -gx EDITOR nvim
 set -gx VISUAL nvim
