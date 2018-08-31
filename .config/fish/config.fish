@@ -6,13 +6,15 @@ set -gx PROJECT_PATHS ~/omaddons/ ~/projects
 set -gx EDITOR nvim
 set -gx VISUAL nvim
 set -gx SHELL bash
+set -gx GTAGSLABEL pygments
+set -gx LANG en_US.utf8
 
 # below are parameters for bobthefish theme
 set -g theme_display_git yes
 set -g theme_display_git_dirty yes
 set -g theme_display_git_untracked yes
 set -g theme_display_git_ahead_verbose yes
-set -g theme_display_git_dirty_verbose yes
+set -g theme_display_git_dirty_verbose no
 set -g theme_display_git_master_branch yes
 set -g theme_git_worktree_support no
 set -g theme_display_vagrant no
