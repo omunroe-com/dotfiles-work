@@ -25,6 +25,7 @@
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = true
     filemanager = "nerdtree"
+    bootstrap_after = "myconfig#after"
 
 # Enable autocomplete layer
 [[layers]]
@@ -70,3 +71,7 @@
 
 #[[layers]]
 #    name = "tags"
+
+[[layers]]
+    name = "lang#markdown"
+

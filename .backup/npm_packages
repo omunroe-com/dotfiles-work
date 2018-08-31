@@ -11,6 +11,10 @@
 ├── newman@3.9.3
 ├── npm@6.4.0
 ├── phantomjs@2.1.7
+├── remark@9.0.0
+├── remark-cli@5.0.0
+├── remark-stringify@5.0.0
 ├── supercat@1.1.0
-└── swagger-cli@1.0.2
+├── swagger-cli@1.0.2
+└── wcwidth@1.0.1
 
